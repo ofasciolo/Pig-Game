@@ -13,9 +13,9 @@
   </head>
   <body>
     <div class="modal p-6 md:p-8">
-      <h1>Welcome!</h1>
-      <p>
-        This are the rules: The first player starts it's turn by rolling the
+      <h1 class="mb-6">Welcome!</h1>
+      <p class="text-2xl">
+        These are the rules: The first player starts it's turn by rolling the
         dice. You can role the dice many times as you want. The numbers that you
         get will be added to your current score. If you get a 1 you will lose
         your current score and it will be turn for the other player. If you hold
@@ -26,10 +26,10 @@
     </div>
     <div class="overlay"></div>
 
-    <main class="hidden">
+    <main class="align-content-center hidden">
       <section class="p-7 md:p-9 player player--0 player--active">
         <h2 class="text-4xl md:text-7xl name" id="name--0">Player 1</h2>
-        <p class="text-6xl md:text-7xl m-5 md:mb-auto score" id="score--0">0</p>
+        <p class="text-6xl md:text-7xl mb-auto score" id="score--0">0</p>
         <div class="current">
           <p class="current-label">Current</p>
           <p class="current-score" id="current--0">0</p>
@@ -37,17 +37,35 @@
       </section>
       <section class="p-7 md:p-9 player player--1">
         <h2 class="text-4xl md:text-7xl name" id="name--1">Player 2</h2>
-        <p class="text-6xl md:text-7xl m-5 md:mb-auto score" id="score--1">0</p>
+        <p class="text-6xl md:text-7xl mb-auto score" id="score--1">0</p>
         <div class="current">
           <p class="current-label">Current</p>
           <p class="current-score" id="current--1">0</p>
         </div>
       </section>
 
-      <img src="dice-5.png" alt="Playing dice" class="dice hidden" />
-      <button class="btn btn--new" onclick="resetGame()">🔄 New game</button>
-      <button class="btn btn--roll" onclick="rollDice()">🎲 Roll dice</button>
-      <button class="btn btn--hold" onclick="holdScore()">📥 Hold</button>
+      <img
+        src="dice-5.png"
+        alt="Playing dice"
+        class="h-6rem md:h-10rem dice hidden"
+      />
+      <button class="btn btn--new" id="new-button" onclick="resetGame()">
+        🔄 New game
+      </button>
+      <button
+        class="btn btn--roll--mobile md:btn--roll"
+        id="roll-button"
+        onclick="rollDice()"
+      >
+        🎲 Roll dice
+      </button>
+      <button
+        class="btn btn--hold--mobile md:btn--hold"
+        id="hold-button"
+        onclick="holdScore()"
+      >
+        📥 Hold
+      </button>
     </main>
     <script src="script.js"></script>
   </body>

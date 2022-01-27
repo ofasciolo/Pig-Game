@@ -8,7 +8,6 @@
 
 html {
   font-size: 53.5%;
-  /*   box-sizing: border-box; */
 }
 
 body {
@@ -138,6 +137,14 @@ main {
   top: 46.1rem;
 }
 
+.btn--hold--mobile {
+  top: 35.1rem;
+}
+
+.btn--roll--mobile {
+  top: 27.3rem;
+}
+
 .btn:active {
   transform: translate(-50%, 3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
@@ -152,7 +159,6 @@ main {
   left: 50%;
   top: 16.5rem;
   transform: translateX(-50%);
-  height: 10rem;
   box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
 
@@ -200,14 +206,33 @@ main {
 }
 
 .play-button {
-  border-radius: 10px;
-  width: 18rem;
-  height: 3rem;
-  margin-top: 3rem;
-  box-shadow: 0 0 0.5rem rgb(0 0 0 / 30%);
+  /*   box-shadow: 0 0 0.5rem rgb(0 0 0 / 30%);
   background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
   color: white;
-  border-color: pink;
+  border-color: pink; */
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+
+  margin-top: 3rem !important;
+  align-self: start;
 }
 
 .p-9 {

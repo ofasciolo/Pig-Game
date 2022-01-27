@@ -13,8 +13,10 @@ function resetGame() {
   currentScore = 0;
   scores = [0, 0];
 
-  document.querySelector(".btn--roll").classList.remove("hidden");
-  document.querySelector(".btn--hold").classList.remove("hidden");
+  document.getElementById("roll-button").classList.remove("hidden");
+  document.getElementById("hold-button").classList.remove("hidden");
+
+  dice.classList.add("hidden");
 
   player1.classList.remove("player--winner");
   player2.classList.remove("player--winner");
@@ -59,8 +61,8 @@ function holdScore() {
       .classList.remove("player--active");
 
     dice.classList.add("hidden");
-    document.querySelector(".btn--roll").classList.add("hidden");
-    document.querySelector(".btn--hold").classList.add("hidden");
+    document.getElementById("roll-button").classList.add("hidden");
+    document.getElementById("hold-button").classList.add("hidden");
   } else {
     switchPlayer();
   }
