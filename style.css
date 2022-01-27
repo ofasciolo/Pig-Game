@@ -209,3 +209,7 @@ main {
   color: white;
   border-color: pink;
 }
+
+.p-9 {
+  padding: 6rem;
+}
