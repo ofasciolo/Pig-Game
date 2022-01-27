@@ -3,6 +3,8 @@
 let player1 = document.querySelector(".player--0");
 let player2 = document.querySelector(".player--1");
 let dice = document.querySelector(".dice");
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
 
 let currentScore, activePlayer, scores;
 
@@ -70,4 +72,10 @@ function switchPlayer() {
   activePlayer = !activePlayer ? 1 : 0;
   player1.classList.toggle("player--active");
   player2.classList.toggle("player--active");
+}
+
+function onClickClose() {
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
+  document.querySelector("main").classList.remove("hidden");
 }

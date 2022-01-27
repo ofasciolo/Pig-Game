@@ -8,7 +8,21 @@
     <title>Pig Game</title>
   </head>
   <body>
-    <main>
+    <div class="modal">
+      <h1>Welcome!</h1>
+      <p>
+        This are the rules: The first player starts it's turn by rolling the
+        dice. You can role the dice many times as you want. The numbers that you
+        get will be added to your current score. If you get a 1 you will lose
+        your current score and it will be turn for the other player. If you hold
+        your score, it will be added to your final score and it will switch
+        players. First one who get to 100 wins. Good luck!
+      </p>
+      <button class="play-button" onclick="onClickClose()">Play!</button>
+    </div>
+    <div class="overlay"></div>
+
+    <main class="hidden">
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
         <p class="score" id="score--0">0</p>
